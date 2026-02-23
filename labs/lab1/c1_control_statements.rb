@@ -33,10 +33,10 @@ end
 # Expected: check_access(15) => "access denied"
 def check_access(age)
   # TODO: Use unless statement (opposite of if)
-  unless age < 18
-    "access granted"
-  else
+  unless age >= 18
     "access denied"
+  else
+    "access granted"
   end
 end
 
@@ -60,7 +60,7 @@ end
 # Expected: count_up(5) => [1, 2, 3, 4, 5]
 def count_up(n)
   # TODO: Use while loop
-   result = []
+  result = []
   i = 1
   while i <= n
     result << i
@@ -74,7 +74,7 @@ end
 # Expected: count_down(5) => [5, 4, 3, 2, 1]
 def count_down(n)
   # TODO: Use until loop (opposite of while)
-   result = []
+  result = []
   i = n
   until i < 1
     result << i
@@ -88,7 +88,7 @@ end
 # Expected: sum_with_loop([1, 2, 3, 4]) => 10
 def sum_with_loop(arr)
   # TODO: Use for loop
-   sum = 0
+  sum = 0
   for num in arr
     sum += num
   end
@@ -97,13 +97,12 @@ end
 
 # Exercise 8: Break and next
 # Return an array of numbers from array that are < 10, stop at first number >= 20
-# Expected: process_numbers([5, 8, 12, 25, 3, 15]) => [5, 8]
+# Expected: process_numbers([5, 8, 12, 25, 3, 15]) => [5, 8, 12]
 def process_numbers(arr)
   # TODO: Use break to stop, next to skip
   result = []
-  for num in arr
+  arr.each do |num|
     break if num >= 20
-    next if num >= 10
     result << num
   end
   result
@@ -165,7 +164,7 @@ def run_tests
   end
 
   # Test 5
-  total_tests += 1
+   total_tests += 1
   if count_up(5) == [1, 2, 3, 4, 5]
     tests_passed += 1
     puts "✓ Test 5 passed: count_up"
@@ -193,7 +192,7 @@ def run_tests
 
   # Test 8
   total_tests += 1
-  if process_numbers([5, 8, 12, 25, 3, 15]) == [5, 8]
+  if process_numbers([5, 8, 12, 25, 3, 15]) == [5, 8, 12]
     tests_passed += 1
     puts "✓ Test 8 passed: process_numbers"
   else

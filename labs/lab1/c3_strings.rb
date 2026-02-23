@@ -29,8 +29,6 @@ end
 # Exercise 4: String slicing
 def first_chars(str)
   str[0, 3]
-  # Alternative:
-  # str[0..2]
 end
 
 # Exercise 5: String manipulation

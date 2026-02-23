@@ -27,13 +27,12 @@ end
 # Exercise 4: Hash iteration
 def double_values(hash)
   hash.transform_values { |value| value * 2 }
-  # Alternative:
-  # hash.each_with_object({}) { |(k, v), new_hash| new_hash[k] = v * 2 }
+
 end
 
 # Exercise 5: Hash filtering
 def filter_by_value(hash, threshold)
-  hash.select { |key, value| value > threshold }
+  hash.select { |_, value| value > threshold }
 end
 
 # Exercise 6: Hash merging
@@ -44,15 +43,11 @@ end
 # Exercise 7: Hash existence check
 def has_key?(hash, key)
   hash.key?(key)
-  # Alternative:
-  # hash.has_key?(key)
 end
 
 # Exercise 8: Working with nested hashes
 def nested_value(hash, key1, key2)
   hash.dig(key1, key2)
-  # Alternative:
-  # hash[key1][key2]
 end
 
 # ============================================

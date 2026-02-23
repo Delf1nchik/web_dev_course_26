@@ -31,8 +31,6 @@ end
 # Exercise 5: Array reduction
 def sum_array(arr)
   arr.sum
-  # Alternative:
-  # arr.reduce(0) { |sum, num| sum + num }
 end
 
 # Exercise 6: Array operations
@@ -43,8 +41,7 @@ end
 # Exercise 7: Array sorting
 def sort_desc(arr)
   arr.sort.reverse
-  # Alternative:
-  # arr.sort { |a, b| b <=> a }
+  
 end
 
 # Exercise 8: Array range
